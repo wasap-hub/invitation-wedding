@@ -1,0 +1,50 @@
+
+
+.theme-sage{
+
+    --primary:#8DAA91;
+    --secondary:#F4F8F4;
+    --accent:#56705A;
+
+    --background:#FFFFFF;
+
+    --text:#34423A;
+
+}
+.theme-rose{
+
+    --primary:#C99898;
+    --secondary:#FFF5F5;
+    --accent:#A66E6E;
+
+    --background:#FFFFFF;
+
+    --text:#5A4545;
+
+}
+
+body.theme-green{
+
+    --primary:#7FA37D;
+    --primary-dark:#648362;
+
+    --background:#F4F8F3;
+
+    --surface:#FFFFFF;
+
+    --text:#304030;
+
+}
+
+body.theme-blue{
+
+    --primary:#365D9D;
+    --primary-dark:#27497F;
+
+    --background:#F4F7FC;
+
+    --surface:#FFFFFF;
+
+    --text:#223344;
+
+}
