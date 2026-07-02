@@ -2,7 +2,7 @@ const CONFIG = {
 
     api:{
 
-    wishes:"https://script.google.com/macros/s/AKfycbxe_v_mxMM3UhaoBbzZDH5PV83zfRZosoM1V_O_MICtZ7Qm13nKs1WuhBEEBkGVrJVL/exec"
+    wishes:"https://script.google.com/macros/s/AKfycbwgsDiVDTev-qI3GNxnMLHWDW7XfLiLLtbMvxfnO7v3yjFgIckqT19mobFBghxJwdhQ/exec"
 
         },
     groom: {

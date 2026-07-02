@@ -1,20 +1,23 @@
-function initWishes(){
+let wishesLoaded = false;
+
+function initWishes() {
+
+    if (wishesLoaded) return;
+
+    wishesLoaded = true;
 
     const btn = document.getElementById("btnWish");
 
-    if(!btn){
+    if (!btn) return;
 
-        return;
+    loadWishes();
 
-    }
-
-    btn.addEventListener("click", function(){
+    btn.onclick = async function () {
 
         const name = document.getElementById("wishName").value.trim();
-
         const message = document.getElementById("wishMessage").value.trim();
 
-        if(name === "" || message === ""){
+        if (!name || !message) {
 
             alert("Silakan lengkapi nama dan ucapan.");
 
@@ -22,28 +25,83 @@ function initWishes(){
 
         }
 
-        const list = document.getElementById("wishList");
+        btn.disabled = true;
+        btn.innerHTML = "Mengirim...";
 
-        const card = document.createElement("div");
+        try {
 
-        card.className = "wish-card";
+            const url =
+                CONFIG.api.wishes +
+                "?action=save" +
+                "&nama=" + encodeURIComponent(name) +
+                "&ucapan=" + encodeURIComponent(message);
 
-        const now = new Date();
+            const response = await fetch(url);
 
-        card.innerHTML = `
-            <div class="wish-name">${name}</div>
-            <div>${message}</div>
-            <div class="wish-date">
-                ${now.toLocaleDateString("id-ID")} ${now.toLocaleTimeString("id-ID")}
-            </div>
-        `;
+            const result = await response.json();
 
-        list.prepend(card);
+            if (result.status) {
 
-        document.getElementById("wishName").value = "";
+                document.getElementById("wishName").value = "";
+                document.getElementById("wishMessage").value = "";
 
-        document.getElementById("wishMessage").value = "";
+                await loadWishes();
 
-    });
+            } else {
+
+                alert("Gagal menyimpan ucapan.");
+
+            }
+
+        } catch (err) {
+
+            console.error(err);
+
+            alert("Terjadi kesalahan.");
+
+        }
+
+        btn.disabled = false;
+        btn.innerHTML = "Kirim Ucapan";
+
+    };
+
+}
+
+async function loadWishes() {
+
+    const list = document.getElementById("wishList");
+
+    if (!list) return;
+
+    list.innerHTML = "";
+
+    try {
+
+        const response = await fetch(CONFIG.api.wishes);
+
+        const data = await response.json();
+
+        data.forEach(item => {
+
+            const card = document.createElement("div");
+
+            card.className = "wish-card";
+
+            card.innerHTML = `
+                <div class="wish-name">${item.nama}</div>
+                <div>${item.ucapan}</div>
+                <div class="wish-date">${item.waktu}</div>
+            `;
+
+            list.appendChild(card);
+
+        });
+
+    } catch (err) {
+
+        console.error(err);
+
+    }
 
 }
