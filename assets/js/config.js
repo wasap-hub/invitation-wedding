@@ -9,19 +9,19 @@ const CONFIG = {
 
         name: "Titis Purbo Laras",
 
-        father: "Bapaknya",
+        father: "Parmono",
 
-        mother: "Emaknya"
+        mother: ":Almh. Sumaryati"
 
     },
 
     bride: {
 
-        name: "Pasangan",
+        name: "Nia Febri Pratiwi",
 
-        father: "Bapaknya",
+        father: "Tusiran",
 
-        mother: "Emaknya"
+        mother: "Rukiyah"
 
     },
 
@@ -29,17 +29,17 @@ const CONFIG = {
 
         akad: {
 
-            place: "KUA SETEMPAT",
+            place: "Di Kediaman mempelai Wanita",
 
-            address: "Purwodadi"
+            address: "Desa Wonosri Rt 02/03 Kecamatan Ngombol Kabupaten Purworejo, Jawa Tengah"
 
         },
 
         reception: {
 
-            place: "Rumah Ceweknya",
+            place: "Di Kediaman mempelai Wanita",
 
-            address: "Purwodadi"
+            address: "Desa Wonosri Rt 02/03 Kecamatan Ngombol Kabupaten Purworejo, Jawa Tengah"
 
         }
 
@@ -78,9 +78,9 @@ const CONFIG = {
 
         time:"09.00 WIB",
 
-        venue:"KUA SETEMPAT",
+        venue:"Di Kediaman mempelai Wanita",
 
-        maps:"https://maps.google.com"
+        maps:"https://maps.app.goo.gl/LvXmKGFJ5nx1Qb1G6"
 
     },
 
@@ -90,9 +90,9 @@ const CONFIG = {
 
         time:"11.00 WIB",
 
-        venue:"RUMAH CEWEKNYA",
+        venue:"Desa Wonosri Rt 02/03 Kecamatan Ngombol Kabupate Purworejo, Jawa Tengah",
 
-        maps:"https://maps.google.com"
+        maps:"https://maps.app.goo.gl/LvXmKGFJ5nx1Qb1G6"
 
     }
 },

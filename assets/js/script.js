@@ -30,11 +30,14 @@ async function init() {
     await loadSection("couple", "04-bride.html");
     await loadSection("countdown", "05-countdown.html");
     await loadSection("event", "06-event.html");
+    initEvent();
+    
     await loadSection("story", "07-story.html");
     await loadSection("gallery", "08-gallery.html");
     await loadSection("gift", "10-gift.html");
     await loadSection("wishes", "11-wishes.html");
     await loadSection("closing", "12-closing.html");
+
 if (typeof initGallery === "function") {
     initGallery();
 }
@@ -48,7 +51,17 @@ if (typeof initWishes === "function") {
 }
 
 }
+function initEvent() {
 
+    const akadMap = document.getElementById("akadMap");
+
+    if (akadMap && CONFIG.event?.akad?.maps) {
+
+        akadMap.href = CONFIG.event.akad.maps;
+
+    }
+
+}
 document.addEventListener("DOMContentLoaded", init);
 
 document.addEventListener("click", function (e) {
@@ -99,4 +112,3 @@ function openInvitation(){
     },2500);
 
 }
-

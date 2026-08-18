@@ -1,11 +1,11 @@
 :root{
 
-      --primary:#365D9D;
-    --primary-dark:#27497F;
+      --primary:#C3744A;
+    --primary-dark:#2E1E17;
 
-    --background:#F4F7FC;
+    --background:#F7F2EC;
 
-    --surface:#21deff;
+    --surface:#CFAE7D;
 
     --text:#223344;
 
@@ -601,7 +601,7 @@ font-size:42px;
 
     background:var(--background);
 
-    color:#0004ff;
+    color:#92929c;
 
     padding:12px 28px;
 
@@ -615,7 +615,7 @@ font-size:42px;
 
     padding:120px 0;
 
-    background:#00b7ff;
+    background:hsl(34.1, 42.2%, 55.9%);
 
 }
 
