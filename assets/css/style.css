@@ -386,18 +386,36 @@ transform:scale(1);
 
 .home-section{
 
-    min-height:100vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--background);
+    position: relative;
+    overflow: hidden;
 
-    display:flex;
+}
 
-    justify-content:center;
+.home-section::after {
+    content: "";
+    position: absolute;
 
-    align-items:center;
+    right: -80px;
+    top: 50%;
+    transform: translateY(-50%);
 
-    text-align:center;
+    width: 420px;
+    height: 80%;
 
-    background:var(--surface);
+    background-image: url("../images/ornament/gunungan.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 
+    opacity: 0.12;
+
+    pointer-events: none;
 }
 
 .home-subtitle{
@@ -408,20 +426,15 @@ transform:scale(1);
 
 }
 
-.home-section h1{
-
-    font-size:72px;
-
+.home-section h1 {
+    font-size: 72px;
+    color: var(--primary-dark);
 }
 
-.home-section span{
-
-    display:block;
-
-    font-size:36px;
-
-    color:var(--background);
-
+.home-section span {
+    display: block;
+    font-size: 36px;
+    color: var(--primary);
 }
 
 .home-date{
@@ -430,6 +443,10 @@ transform:scale(1);
 
 }
 
+.home-content {
+    position: relative;
+    z-index: 2;
+}
 .scroll-down{
 
     margin-top:60px;
@@ -1035,6 +1052,12 @@ Wedding Gift
     .timeline-content {
         width: 100%;
         padding: 20px;
+    }
+    .home-section::after {
+        right: -100px;
+        width: 300px;
+        height: 70%;
+        opacity: 0.10;
     }
 
 }
