@@ -1003,3 +1003,38 @@ Wedding Gift
     margin-top:15px;
 
 }
+
+@media (max-width: 576px) {
+
+    .story-section {
+        padding: 80px 20px;
+    }
+
+    .timeline {
+        margin-top: 40px;
+    }
+
+    .timeline::before {
+        left: 15px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        left: 0;
+        padding: 20px 0 20px 40px;
+        text-align: left;
+    }
+
+    .timeline-year {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .timeline-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+}
